@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rbn/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 if [[ $(tty) == /dev/tty* ]]; then
     export TERM=xterm-256color
