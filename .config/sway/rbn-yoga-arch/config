@@ -1,0 +1,11 @@
+# Output configuration
+output DP-3 resolution 1920x1200 position 0,0
+output DP-4 resolution 1920x1200 position 1920,0
+output eDP-1 resolution 1920x1080 position 3840,0
+
+# Default outputs for workspaces
+workspace 1 output DP-3
+workspace 2 output DP-4
+workspace 3 output eDP-1
+workspace "21:" output DP-4
+workspace "22:" output DP-4
