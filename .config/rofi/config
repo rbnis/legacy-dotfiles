@@ -1,0 +1,2 @@
+rofi.monitor: -4
+rofi.modi:    drun,ssh
