@@ -7,8 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 if [[ $(tty) == /dev/tty* ]]; then
     export TERM=xterm-256color
 else
-    ZSH_THEME="powerlevel9k/powerlevel9k"
-    #ZSH_THEME="agnoster"
+    source ~/.config/zsh/theme.conf
 fi
 
 # Uncomment the following line to display red dots whilst waiting for completion.
@@ -24,14 +23,6 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
 export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 export VISUAL="nano"
 
 # Lines configured by zsh-newuser-install
@@ -43,7 +34,7 @@ bindkey -e
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/rbn/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
