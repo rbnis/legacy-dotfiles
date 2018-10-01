@@ -3,7 +3,7 @@ set $mod Mod4
 set $term termite
 #set $menu dmenu_path | dmenu -i | xargs swaymsg exec
 set $menu rofi -show drun | xargs swaymsg exec
-set $background ~/images/conifre.jpg 
+set $background ~/.images/conifer.jpg
 
 # Colors                border  bg      text    indi    childborder
 client.focused          #5A875A #5A875A #E1E1E1 #002D00 #5A875A
