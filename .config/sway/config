@@ -2,6 +2,8 @@
 set $mod Mod4
 set $term termite
 set $menu rofi -show drun | xargs swaymsg exec
+set $screenshot grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
+set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
 set $background ~/.images/conifer.jpg
 
 # Colors                border  bg      text    indi    childborder
@@ -46,6 +48,8 @@ assign [class="^Keepass$"] 21 
 
 # Shortcuts
 bindsym $mod+Return exec $term
+bindsym $mod+Print exec $screenshot
+bindsym $mod+Shift+Print exec $screenclip
 bindsym $mod+d exec $menu
 
 bindsym $mod+Shift+q kill
