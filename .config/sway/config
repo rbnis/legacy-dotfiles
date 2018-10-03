@@ -1,12 +1,11 @@
 # Variables
 set $mod Mod4
 set $term termite
-#set $menu dmenu_path | dmenu -i | xargs swaymsg exec
 set $menu rofi -show drun | xargs swaymsg exec
 set $background ~/.images/conifer.jpg
 
 # Colors                border  bg      text    indi    childborder
-client.focused          #5A875A #5A875A #E1E1E1 #002D00 #5A875A
+client.focused          #5FAF5F #5FAF5F #2D2D2D #002D00 #5FAF5F
 client.focused_inactive #5F676A #5F676A #E1E1E1 #484E50 #5F676A
 client.unfocused        #2D2D2D #2D2D2D #E1E1E1 #292D2E #2D2D2D
 client.urgent           #900000 #900000 #E1E1E1 #900000 #900000
@@ -45,18 +44,16 @@ assign [class="^Keepass$"] 21 
 #for_window [app_id="^glade-previewer$"] floating enable
 #for_window [app_id="^gnome-calculator$"] floating enable
 
-# Program shortcuts
+# Shortcuts
 bindsym $mod+Return exec $term
-
-# More shortcuts
 bindsym $mod+d exec $menu
+
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exit
 bindsym $mod+b splith
 bindsym $mod+v splitv
 
-# Lock Screen
 bindsym $mod+l exec swaylock -i $background
 
 # Idle configuration
@@ -176,12 +173,12 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-    font pango:Roboto 11
+    font pango:Roboto 11, Mono 11
     colors {
         background #2D2D2D
         statusline #FFFFFF
 
-        focused_workspace  #5A875A #5A875A #E1E1E1
+        focused_workspace  #5FAF5F #5FAF5F #2D2D2D
         active_workspace   #002D00 #002D00 #E1E1E1
         inactive_workspace #2D2D2D #2D2D2D #E1E1E1
         urgent_workspace   #900000 #900000 #E1E1E1

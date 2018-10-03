@@ -1,10 +1,15 @@
 * {
+    color-background: #2D2D2D;
+    color-text:       #E1E1E1;
+    color-highlight:  #5FAF5F;
+
     font:             "Roboto 11";
-    background-color: #2D2D2D;
-    text-color:       #E1E1E1;
+    background-color: @color-background;
+    text-color:       @color-text;
 }
 
 configuration {
+    modi:             "drun,run,ssh";
     monitor:          "0";
 }
 
@@ -18,29 +23,49 @@ configuration {
 
 #horibox {
     orientation:      horizontal;
-    children:         [ prompt, entry, listview ];
+
+    children:         [ promptbox, entry, listview ];
+}
+
+#promptbox{
+    orientation:      horizontal;
+    expand:           false;
+    background-color: @color-highlight;
+
+    children:         [ prompt, textbox-prompt-colon ];
 }
 
 #prompt {
-    background-color: #5A875A;
-    padding:          3 5 3 5;
+    padding:          4 0 3 5;
+    background-color: @color-highlight;
+    text-color:       @color-background;
+}
+
+#textbox-prompt-colon {
+    str:              ":";
+
+    padding:          4 5 3 0;
+    expand:           false;
+    text-color:       @color-background;
+    background-color: @color-highlight;
 }
 
 #listview {
     layout:           horizontal;
     spacing:          5px;
-    lines:            100;
+    lines:            50;
 }
 
 #entry {
-    padding:          3 0 3 5;
+    padding:          4 0 3 5;
     expand:           false;
     width:            11em;
 }
 
 #element {
-    padding:          3 10;
+    padding:          4 10 3 10;
 }
 #element selected {
-    background-color: #5A875A;
+    background-color: @color-highlight;
+    text-color:       @color-background;
 }
