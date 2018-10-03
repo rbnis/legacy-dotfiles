@@ -4,9 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-if [[ $(tty) == /dev/tty* ]]; then
-    export TERM=xterm-256color
-else
+if [[ $(tty) != /dev/tty* ]]; then
     source ~/.config/zsh/theme.conf
 fi
 
@@ -24,6 +22,7 @@ source /usr/share/fzf/key-bindings.zsh
 
 export LANG=en_US.UTF-8
 export VISUAL="nano"
+export TERM=xterm-256color
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
