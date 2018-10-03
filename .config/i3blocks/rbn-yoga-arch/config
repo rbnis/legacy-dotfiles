@@ -18,6 +18,11 @@ interval=15
 #[volume]
 #signal=1
 
+[battery]
+instance=BAT0
+signal=2
+interval=15
+
 [date]
 label= 
 

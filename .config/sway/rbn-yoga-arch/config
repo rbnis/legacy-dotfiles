@@ -3,6 +3,12 @@ output DP-3 resolution 1920x1200 position 0,0
 output DP-4 resolution 1920x1200 position 1920,0
 output eDP-1 resolution 1920x1080 position 3840,0
 
+# Input configuration
+input "1739:0:Synaptics_TM2941-001" {
+    tap enabled
+    natural_scroll enabled
+}
+
 # Default outputs for workspaces
 workspace 1 output DP-3
 workspace 2 output DP-4
