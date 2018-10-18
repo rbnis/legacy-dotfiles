@@ -1,15 +1,15 @@
 # Variables
 set $mod Mod4
 set $term termite
-set $menu rofi -show drun | xargs swaymsg exec
+set $menu rofi -m $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[], .floating_nodes[]) | .focused] | any) | index(true)') -show drun | xargs swaymsg exec
 set $screenshot grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
 set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
 set $background ~/.images/conifer.jpg
 
 # Colors                border  bg      text    indi    childborder
-client.focused          #5FAF5F #5FAF5F #2D2D2D #002D00 #5FAF5F
-client.focused_inactive #5F676A #5F676A #E1E1E1 #484E50 #5F676A
-client.unfocused        #2D2D2D #2D2D2D #E1E1E1 #292D2E #2D2D2D
+client.focused          #5FAF5F #5FAF5F #2D2D2D #2B552B #5FAF5F
+client.focused_inactive #2B552B #2B552B #E1E1E1 #2B552B #1B552B
+client.unfocused        #2D2D2D #2D2D2D #E1E1E1 #2D2D2D #2D2D2D
 client.urgent           #900000 #900000 #E1E1E1 #900000 #900000
 
 # Font
@@ -183,7 +183,7 @@ bar {
         statusline #FFFFFF
 
         focused_workspace  #5FAF5F #5FAF5F #2D2D2D
-        active_workspace   #002D00 #002D00 #E1E1E1
+        active_workspace   #2B552B #2B552B #E1E1E1
         inactive_workspace #2D2D2D #2D2D2D #E1E1E1
         urgent_workspace   #900000 #900000 #E1E1E1
     }

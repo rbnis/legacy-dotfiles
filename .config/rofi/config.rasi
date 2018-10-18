@@ -10,7 +10,6 @@
 
 configuration {
     modi:             "drun,run,ssh";
-    monitor:          "0";
 }
 
 #window {
