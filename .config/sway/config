@@ -22,6 +22,7 @@ new_float pixel 1
 hide_edge_borders smart
 
 # Autostart
+exec --no-startup-id mako
 exec spotify
 
 # Input configuration
@@ -60,6 +61,10 @@ bindsym $mod+b splith
 bindsym $mod+v splitv
 
 bindsym $mod+l exec $lock
+
+# Notifications
+bindsym Control+Space exec makoctl dismiss
+bindsym Control+Shift+Space exec makoctl dismiss --all
 
 # Idle configuration
 #exec swayidle \

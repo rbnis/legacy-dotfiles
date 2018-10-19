@@ -1,0 +1,18 @@
+font=Sans 11
+# anchor=bottom-right
+width=350
+padding=10
+margin=10
+border-size=2
+default-timeout=5000
+
+# Only for desktop, ignored when no such output exists
+output=DP-1
+
+background-color=#2D2D2D
+border-color=#5FAF5F
+text-color=#E1E1E1
+
+[urgency=high]
+border-color=#900000
+ignore-timeout=1
