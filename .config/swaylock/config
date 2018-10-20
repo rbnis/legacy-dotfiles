@@ -6,9 +6,9 @@ indicator-thickness=60
 #line-uses-inside
 
 inside-color=5FAF5F00
-inside-clear-color=A98A7000
+inside-clear-color=DFAF0000
 inside-ver-color=43656500
-inside-wrong-color=A9707000
+inside-wrong-color=90000000
 
 ring-color=2D2D2DD9
 ring-clear-color=2D2D2DD9
@@ -16,15 +16,15 @@ ring-ver-color=2D2D2DD9
 ring-wrong-color=2D2D2DD9
 
 line-color=5FAF5F00
-line-clear-color=A98A70FF
+line-clear-color=DFAF00FF
 line-ver-color=436565FF
-line-wrong-color=A97070FF
+line-wrong-color=900000FF
 
 text-color=5FAF5F00
-text-clear-color=A98A7000
+text-clear-color=DFAF0000
 text-ver-color=43656500
-text-wrong-color=A9707000
+text-wrong-color=90000000
 
 key-hl-color=5FAF5FFF
-bs-hl-color=A97070FF
+bs-hl-color=900000FF
 separator-color=2D2D2D00
