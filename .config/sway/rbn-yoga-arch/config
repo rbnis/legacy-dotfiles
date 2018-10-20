@@ -13,5 +13,6 @@ input "1739:0:Synaptics_TM2941-001" {
 workspace 1 output DP-3
 workspace 2 output DP-4
 workspace 3 output eDP-1
-workspace "21:" output DP-4
-workspace "22:" output DP-4
+workspace "11 " output DP-4
+workspace "12 " output DP-4
+workspace "22 " output DP-4
