@@ -23,6 +23,7 @@ hide_edge_borders smart
 
 # Autostart
 exec --no-startup-id mako
+exec redshift -c ~/.config/redshift/config
 exec spotify
 
 # Input configuration
