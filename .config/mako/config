@@ -7,7 +7,7 @@ border-size=2
 default-timeout=5000
 
 # Only for desktop, ignored when no such output exists
-output=DP-1
+output=DP-3
 
 background-color=#2D2D2D
 border-color=#5FAF5F
