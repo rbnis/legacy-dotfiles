@@ -62,16 +62,16 @@ bindsym Control+Space exec makoctl dismiss
 bindsym Control+Shift+Space exec makoctl dismiss --all
 
 # Multimedia
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pactl list short sinks | grep RUNNING | cut -c 1) +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pactl list short sinks | grep RUNNING | cut -c 1) -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pactl list short sinks | grep RUNNING | cut -c 1) toggle
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pactl list short sinks | grep RUNNING | cut -c 1) +5%
+bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pactl list short sinks | grep RUNNING | cut -c 1) -5%
+bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pactl list short sinks | grep RUNNING | cut -c 1) toggle
+bindsym --locked XF86AudioPlay exec playerctl play-pause
+bindsym --locked XF86AudioNext exec playerctl next
+bindsym --locked XF86AudioPrev exec playerctl previous
 
 # Brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym --locked XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym --locked XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 # Toggle Redshift
 bindsym $mod+Home exec --no-startup-id pkill -USR1 redshift
