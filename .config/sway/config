@@ -211,11 +211,13 @@ bar {
     colors {
         background #2D2D2D
         statusline #E1E1E1
+        separator  #E1E1E1
 
         focused_workspace  #5FAF5F #5FAF5F #2D2D2D
         active_workspace   #2B552B #2B552B #E1E1E1
         inactive_workspace #2D2D2D #2D2D2D #E1E1E1
         urgent_workspace   #900000 #900000 #E1E1E1
+        binding_mode       #5FAF5F #5FAF5F #2D2D2D
     }
     status_command i3blocks -c ~/.config/i3blocks/$(hostname)/config
 }
