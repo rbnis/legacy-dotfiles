@@ -21,6 +21,9 @@ new_window pixel 1
 new_float pixel 1
 hide_edge_borders smart
 
+smart_gaps on
+gaps inner 5
+
 # Autostart
 exec --no-startup-id mako
 exec redshift -c ~/.config/redshift/config
@@ -62,9 +65,9 @@ bindsym Control+Space exec makoctl dismiss
 bindsym Control+Shift+Space exec makoctl dismiss --all
 
 # Multimedia
-bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pactl list short sinks | grep RUNNING | cut -c 1) +5%
-bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pactl list short sinks | grep RUNNING | cut -c 1) -5%
-bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pactl list short sinks | grep RUNNING | cut -c 1) toggle
+bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
+bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
+bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
@@ -77,11 +80,11 @@ bindsym --locked XF86MonBrightnessDown exec --no-startup-id light -U 10
 bindsym $mod+Home exec --no-startup-id pkill -USR1 redshift
 
 # Idle configuration
-#exec swayidle \
-#     timeout 300 'swaylock -i $background' \
+exec swayidle \
+     timeout 300 'swaylock -i ~/.images/conifer.jpg' \
 #     timeout 600 'swaymsg "output * dpms off"' \
 #          resume 'swaymsg "output * dpms on"' \
-#    before-sleep 'swaylock -i $background'
+    before-sleep 'swaylock -i ~/.images/conifer.jpg'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 600 seconds, and turn your screens back on when
@@ -204,13 +207,13 @@ bar {
     position top
     font pango:Sans 12 
     colors {
-        background #2D2D2D
+        background #2D2D2DD9
         statusline #E1E1E1
         separator  #E1E1E1
 
         focused_workspace  #5FAF5F #5FAF5F #2D2D2D
-        active_workspace   #2B552B #2B552B #E1E1E1
-        inactive_workspace #2D2D2D #2D2D2D #E1E1E1
+        active_workspace   #2B552BD9 #2B552BD9 #E1E1E1
+        inactive_workspace #2D2D2DD9 #2D2D2DD9 #E1E1E1
         urgent_workspace   #900000 #900000 #E1E1E1
         binding_mode       #5FAF5F #5FAF5F #2D2D2D
     }
