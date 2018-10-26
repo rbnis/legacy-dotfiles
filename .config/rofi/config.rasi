@@ -1,72 +1,36 @@
+configuration {
+    modi: "drun";
+    show-icons:   true;
+    drun-icon-theme: "Paper";
+    sidebar-mode: false;
+}
+
 * {
-    color-background: #2D2D2D;
+    color-background: #2D2D2DAA;
     color-text:       #E1E1E1;
     color-highlight:  #5FAF5F;
 
-    font:             "Sans 12";
-    background-color: @color-background;
+    background-color: transparent;
     text-color:       @color-text;
-}
+    spacing:          30;
 
-configuration {
-    modi:             "drun,run,ssh";
-    show-icons:       true;
-    drun-icon-theme:  "Paper";
+    font: "Sans 18";
 }
 
 #window {
-    anchor:           north;
-    location:         north;
-    width:            100%;
+    fullscreen: true;
+    transparency: "background";
 
-    children:         [ horibox ];
+    background-color: @color-background;
+   
+    children: [ dummy1, hdum, dummy2 ];
 }
 
-#horibox {
-    orientation:      horizontal;
-
-    children:         [ promptbox, entry, listview ];
+#hdum {
+    orientation: horizontal;
+    children: [ dummy3, mainbox, dummy4 ];
 }
 
-#promptbox{
-    orientation:      horizontal;
-    expand:           false;
-    background-color: @color-highlight;
-
-    children:         [ prompt, textbox-prompt-colon ];
-}
-
-#prompt {
-    padding:          3 0 3 5;
-    background-color: @color-highlight;
-    text-color:       @color-background;
-}
-
-#textbox-prompt-colon {
-    str:              ":";
-
-    padding:          3 5 3 0;
-    expand:           false;
-    text-color:       @color-background;
-    background-color: @color-highlight;
-}
-
-#listview {
-    layout:           horizontal;
-    spacing:          5px;
-    lines:            50;
-}
-
-#entry {
-    padding:          3 0 3 5;
-    expand:           false;
-    width:            11em;
-}
-
-#element {
-    padding:          3 10 3 10;
-}
 #element selected {
-    background-color: @color-highlight;
-    text-color:       @color-background;
+    text-color: @color-highlight;
 }

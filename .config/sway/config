@@ -21,8 +21,9 @@ new_window pixel 1
 new_float pixel 1
 hide_edge_borders smart
 
-smart_gaps on
+smart_gaps off
 gaps inner 5
+gaps outer -5
 
 # Autostart
 exec --no-startup-id mako
@@ -207,13 +208,13 @@ bar {
     position top
     font pango:Sans 12 
     colors {
-        background #2D2D2DD9
+        background #2D2D2D00
         statusline #E1E1E1
         separator  #E1E1E1
 
         focused_workspace  #5FAF5F #5FAF5F #2D2D2D
-        active_workspace   #2B552BD9 #2B552BD9 #E1E1E1
-        inactive_workspace #2D2D2DD9 #2D2D2DD9 #E1E1E1
+        active_workspace   #2B552B00 #2B552B00 #E1E1E1
+        inactive_workspace #2D2D2D00 #2D2D2D00 #E1E1E1
         urgent_workspace   #900000 #900000 #E1E1E1
         binding_mode       #5FAF5F #5FAF5F #2D2D2D
     }
