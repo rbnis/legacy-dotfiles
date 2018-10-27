@@ -1,0 +1,83 @@
+* {
+    border:        none;
+    border-radius: 0;
+    font-family:   Sans;
+    font-size:     14px;
+}
+
+window {
+    color:      #E1E1E1;
+    background: rgba(45, 45, 45, 0);
+    border-top: 3px solid rgba(225,225,225,0);
+}
+
+#workspaces button {
+    padding:    0 5px;
+    color:      #E1E1E1;
+    border-top: 3px solid #5FAF5F;
+}
+
+#workspaces button.icon label {
+}
+
+#workspaces button.focused {
+    color:      #2D2D2D;
+    background: #5FAF5F;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #custom-storage {
+    padding:    0 10px;
+    margin:     0 0 0 10px;
+    color:      #E1E1E1;
+    background: rgba(45, 45, 45, 0);
+    border-top: 3px solid #5FAF5F;
+}
+
+#clock {
+    color:      #2D2D2D;
+    background: #5FAF5F;
+}
+
+#battery {
+}
+
+#battery.charging {
+    /*color:      rgba(95, 175, 95, 0.5);
+    background: #5FAF5F;*/
+    border-top: 3px solid #436565;  
+
+}
+
+#battery.warning {
+    border-top: 3px solid #900000;  
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
+
+#network.disconnected {
+    border-top: 3px solid #900000;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+    border-top: 3px solid #900000;
+}
+
+#custom-spotify {
+    color:      #E1E1E1;
+    /*background: #84BD00;*/
+    border-top: 3px solid #84BD00;
+    margin: 0 10;
+}
+
+#custom-storage {
+}

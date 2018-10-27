@@ -1,0 +1,18 @@
+DIR="/"
+ALERT=10
+
+df -h -P -l "$DIR" | awk -v alert_low=ALERT '
+/\/.*/ {
+	print $1 " " $4
+	use=$5
+	exit 0
+}
+#Color change if low. Feature for future
+#END {
+#	gsub(/%$/,"",use)
+#	if (100 - use < alert_low) {
+#		# color
+#		print "#FF0000"
+#	}
+#}
+'

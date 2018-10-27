@@ -44,6 +44,7 @@ output * bg $background fill
 assign [class="^Signal$"] 11 
 assign [class="^Riot$"] 11 
 assign [class="^Thunderbird$"] 12 
+assign [class="^code$"] 15 
 assign [class="^Steam$"] 19 
 assign [class="^Spotify$"] 22 
 
@@ -118,7 +119,7 @@ bindsym $mod+F1  workspace "11 "
 bindsym $mod+F2  workspace "12 "
 bindsym $mod+F3  workspace 13
 bindsym $mod+F4  workspace 14
-bindsym $mod+F5  workspace 15
+bindsym $mod+F5  workspace "15 "
 bindsym $mod+F6  workspace 16
 bindsym $mod+F7  workspace 17
 bindsym $mod+F8  workspace 18
@@ -142,7 +143,7 @@ bindsym $mod+Shift+F1   move container to workspace "11 "
 bindsym $mod+Shift+F2   move container to workspace "12 "
 bindsym $mod+Shift+F3   move container to workspace 13
 bindsym $mod+Shift+F4   move container to workspace 14
-bindsym $mod+Shift+F5   move container to workspace 15
+bindsym $mod+Shift+F5   move container to workspace "15 "
 bindsym $mod+Shift+F6   move container to workspace 16
 bindsym $mod+Shift+F7   move container to workspace 17
 bindsym $mod+Shift+F8   move container to workspace 18
@@ -203,23 +204,7 @@ mode "$mode_system" {
 }
 bindsym $mod+Shift+e mode "$mode_system"
 
-# Status Bar
-bar {
-    position top
-    font pango:Sans 12 
-    colors {
-        background #2D2D2D00
-        statusline #E1E1E1
-        separator  #E1E1E1
-
-        focused_workspace  #5FAF5F #5FAF5F #2D2D2D
-        active_workspace   #2B552B00 #2B552B00 #E1E1E1
-        inactive_workspace #2D2D2D00 #2D2D2D00 #E1E1E1
-        urgent_workspace   #900000 #900000 #E1E1E1
-        binding_mode       #5FAF5F #5FAF5F #2D2D2D
-    }
-    status_command i3blocks -c ~/.config/i3blocks/$(hostname)/config
-}
+exec_always ~/.config/waybar/waybar.sh
 
 include ~/.config/sway/$(hostname)/*
 #include ~/.config/sway/config.d/*
