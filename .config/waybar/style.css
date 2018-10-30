@@ -2,70 +2,70 @@
     border:        none;
     border-radius: 0;
     font-family:   Sans;
-    font-size:     14px;
+    font-size:     15px;
 }
 
 window {
     color:      #E1E1E1;
-    background: rgba(45, 45, 45, 0);
-    border-top: 3px solid rgba(225,225,225,0);
+    background: transparent;
 }
 
 #workspaces button {
-    padding:    0 5px;
+    padding:    0 10px;
     color:      #E1E1E1;
+    background: rgba(45, 45, 45, 0.5);
     border-top: 3px solid #5FAF5F;
 }
 
-#workspaces button.icon label {
+#workspaces button.visible {
+    color:      #E1E1E1;
+    background: rgba(95, 175, 95, 0.3);
+    border-top: 3px solid #5FAF5F;
 }
 
 #workspaces button.focused {
-    color:      #2D2D2D;
-    background: #5FAF5F;
-}
-
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #custom-storage {
-    padding:    0 10px;
-    margin:     0 0 0 10px;
     color:      #E1E1E1;
-    background: rgba(45, 45, 45, 0);
+    background: rgba(95, 175, 95, 0.5);
     border-top: 3px solid #5FAF5F;
 }
 
-#clock {
-    color:      #2D2D2D;
-    background: #5FAF5F;
+#workspaces button.urgent {
+    border-top: 3px solid #900000;
 }
 
-#battery {
+#mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #custom-storage, #custom-brightness {
+    padding:    0 10px;
+    margin:     0 0 0 10px;
+    color:      #E1E1E1;
+    background: rgba(45, 45, 45, 0.5);
+    border-top: 3px solid #5FAF5F;
+}
+
+#mode {
+    border-top: 3px solid #900000;
+}
+
+#clock {
+    color:      #E1E1E1;
+    background: rgba(95, 175, 95, 0.5);
+    border-top: 3px solid #5FAF5F;
 }
 
 #battery.charging {
-    /*color:      rgba(95, 175, 95, 0.5);
-    background: #5FAF5F;*/
     border-top: 3px solid #436565;  
 
 }
 
 #battery.warning {
-    border-top: 3px solid #900000;  
+    border-top: 3px solid #DFAF00;
 }
 
-#cpu {
-}
-
-#memory {
-}
-
-#network {
+#battery.critical {
+    border-top: 3px solid #900000;
 }
 
 #network.disconnected {
     border-top: 3px solid #900000;
-}
-
-#pulseaudio {
 }
 
 #pulseaudio.muted {
@@ -73,11 +73,14 @@ window {
 }
 
 #custom-spotify {
-    color:      #E1E1E1;
-    /*background: #84BD00;*/
+    margin:     0 10px;
+    color:      #2d2d2d;
+    background: rgba(132, 189, 0, 0.5);
     border-top: 3px solid #84BD00;
-    margin: 0 10;
 }
 
 #custom-storage {
+}
+
+#custom-brightness {
 }

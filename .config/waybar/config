@@ -3,10 +3,13 @@
     "position": "top", // Waybar at the bottom of your screen
     "height": 30, // Waybar height
 
-    "modules-left": ["sway/workspaces", "custom/spotify"],
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "custom/storage", "cpu", "memory", "battery", "clock"],
+    "modules-right": ["custom/brightness", "pulseaudio", "network", "custom/storage", "cpu", "memory", "battery", "clock"],
 
+    "sway/mode": {
+        "format": " {}"
+    },
     "sway/workspaces": {
         "disable-scroll": true
     },
@@ -21,7 +24,10 @@
     },
     "battery": {
         "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "interval": 60,
+        "warning": 25,
+        "critical": 10
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
@@ -37,7 +43,6 @@
     "custom/spotify": {
         "format": " {}",
         "max-length": 40,
-        "interval": 15,
         "exec": "~/.config/waybar/modules/spotify",
         "exec-if": "pgrep spotify"
     },
@@ -45,5 +50,10 @@
         "format": "{} ",
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage"
+    },
+    "custom/brightness": {
+        "format": "{} ",
+        "interval": 15,
+        "exec": "~/.config/waybar/modules/brightness"
     }
 }

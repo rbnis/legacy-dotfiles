@@ -1,6 +1,6 @@
 # Variables
 set $mod Mod4
-set $lock swaylock -i $background
+set $lock ~/.local/bin/scripts/lock.sh
 set $term termite
 set $menu rofi -m $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[], .floating_nodes[]) | .focused] | any) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
 set $screenshot grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
@@ -83,10 +83,10 @@ bindsym $mod+Home exec --no-startup-id pkill -USR1 redshift
 
 # Idle configuration
 exec swayidle \
-     timeout 300 'swaylock -i ~/.images/conifer.jpg' \
+#     timeout 300 'exec $lock' \
 #     timeout 600 'swaymsg "output * dpms off"' \
 #          resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -i ~/.images/conifer.jpg'
+    before-sleep 'exec $lock'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 600 seconds, and turn your screens back on when
