@@ -45,7 +45,7 @@
     "custom/spotify": {
         //"format": " {}",
         "interval": 1,
-        "return-type":"json",
+        "return-type": "json",
         "max-length": 40,
         "exec": "~/.config/waybar/modules/spotify",
         "exec-if": "pgrep spotify"

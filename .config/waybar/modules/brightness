@@ -4,7 +4,7 @@ if [ -z "$(ls -A /sys/class/backlight)" ]; then
   exit 1
 else
   brightness=$(light | cut -d. -f1)
-  $text=brightness"%"
+  text=$brightness"%"
 
   if [[ brightness -gt 66 ]]; then
     class="bright"
