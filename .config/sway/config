@@ -3,8 +3,8 @@ set $mod Mod4
 set $lock ~/.local/bin/scripts/lock.sh
 set $term termite
 set $menu rofi -m $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[], .floating_nodes[]) | .focused] | any) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
-set $screenshot grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
-set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
+set $screenshot grim ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
+set $screenclip slurp | grim -g - ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
 set $background ~/.images/conifer.jpg
 
 # Colors                border  bg      text    indi    childborder
