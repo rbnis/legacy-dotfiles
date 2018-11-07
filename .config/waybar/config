@@ -26,8 +26,10 @@
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""],
         "interval": 60,
-        "warning": 25,
-        "critical": 10
+        "states": {
+            "warning": 25,
+            "critical": 10
+        }
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
@@ -41,7 +43,9 @@
         "format-icons": ["", ""]
     },
     "custom/spotify": {
-        "format": " {}",
+        //"format": " {}",
+        "interval": 1,
+        "return-type":"json",
         "max-length": 40,
         "exec": "~/.config/waybar/modules/spotify",
         "exec-if": "pgrep spotify"
@@ -54,6 +58,7 @@
     "custom/brightness": {
         "format": "{} ",
         "interval": 15,
+        "return-type": "json",
         "exec": "~/.config/waybar/modules/brightness"
     }
 }

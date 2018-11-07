@@ -3,11 +3,15 @@
     border-radius: 0;
     font-family:   Sans;
     font-size:     15px;
+    box-shadow:    none;
+    text-shadow:   none;
 }
 
 window {
     color:      #E1E1E1;
-    background: transparent;
+    /*background: transparent;*/
+    background: rgba(45, 45, 45, 0.2);
+    border-top: 3px solid rgba(225, 225, 225, 0.1);
 }
 
 #workspaces button {
@@ -37,7 +41,7 @@ window {
     padding:    0 10px;
     margin:     0 0 0 10px;
     color:      #E1E1E1;
-    background: rgba(45, 45, 45, 0.5);
+    background: rgba(45, 45, 45, 0.75);
     border-top: 3px solid #5FAF5F;
 }
 
@@ -74,13 +78,20 @@ window {
 
 #custom-spotify {
     margin:     0 10px;
-    color:      #2d2d2d;
-    background: rgba(132, 189, 0, 0.5);
+    color:      #84BD00;
+    /*background: rgba(45, 45, 45, 0.5);*/
     border-top: 3px solid #84BD00;
 }
 
-#custom-storage {
+/*#custom-spotify.paused {
+    color:      #2d2d2d;
+    background: rgba(132, 189, 0, 0.5);
+}*/
+
+#custom-test.yellow {
+    border-top: 3px solid #DFAF00;
+}
+#custom-test.red {
+    border-top: 3px solid #900000;
 }
 
-#custom-brightness {
-}
