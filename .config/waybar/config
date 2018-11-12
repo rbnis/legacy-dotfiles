@@ -5,8 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/brightness", "pulseaudio", "network", "custom/storage", "cpu", "memory", "battery", "clock"],
-
+    "modules-right": ["pulseaudio", "custom/brightness", "network", "custom/storage", "memory", "cpu", "battery", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -14,13 +13,18 @@
         "disable-scroll": true
     },
     "sway/window": {
-        "max-length": 50
+        "max-length": 80
+    },
+    "clock": {
+        "format": "{:%a, %d. %b    %H:%M}",
+        "interval": 20
     },
     "cpu": {
-        "format": "{}% "
+        "format": "{}%  ",
+        "interval": 5
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}%  "
     },
     "battery": {
         "format": "{capacity}% {icon}",
@@ -40,7 +44,8 @@
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-muted": "",
-        "format-icons": ["", ""]
+        "format-icons": ["", ""],
+        "scroll-step": 10
     },
     "custom/spotify": {
         //"format": " {}",
@@ -51,7 +56,7 @@
         "exec-if": "pgrep spotify"
     },
     "custom/storage": {
-        "format": "{} ",
+        "format": "{}  ",
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage"
     },

@@ -44,10 +44,10 @@ source ~/.config/zsh/aliases.conf
 export XKB_DEFAULT_LAYOUT=de
 
 if [ $(tty) = "/dev/tty1" ]; then
+#    export GDK_BACKEND=wayland
     export CLUTTER_BACKEND=wayland
     export QT_QPA_PLATFORM=wayland
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-    export QT_WAYLAND_FORCE_DPI=96
     export SDL_VIDEODRIVER=wayland
     export _JAVA_AWT_WM_NONREPARENTING=1
 

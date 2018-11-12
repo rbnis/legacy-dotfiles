@@ -37,9 +37,10 @@ window {
     border-top: 3px solid #900000;
 }
 
-#mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #custom-storage, #custom-brightness {
+#mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-storage, #custom-brightness {
     padding:    0 10px;
     margin:     0 0 0 10px;
+    min-width:  55px;
     color:      #E1E1E1;
     background: rgba(45, 45, 45, 0.75);
     border-top: 3px solid #5FAF5F;
@@ -77,9 +78,10 @@ window {
 }
 
 #custom-spotify {
+    padding:    0 10px;
     margin:     0 10px;
     color:      #84BD00;
-    /*background: rgba(45, 45, 45, 0.5);*/
+    background: rgba(45, 45, 45, 0.75);
     border-top: 3px solid #84BD00;
 }
 
