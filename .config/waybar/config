@@ -10,6 +10,7 @@
         "format": " {}"
     },
     "sway/workspaces": {
+//        "all-outputs": true,
         "disable-scroll": true
     },
     "sway/window": {
@@ -37,14 +38,17 @@
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname} ",
+        "format": "{ifname} {ipaddr}/{cidr} ",
+        "format-wifi": "{essid} {ipaddr}/{cidr} ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
         "format-disconnected": ""
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-muted": "",
-        "format-icons": ["", ""],
+        "format-icons": {
+            "default": ["", ""]
+        },
         "scroll-step": 10
     },
     "custom/spotify": {
