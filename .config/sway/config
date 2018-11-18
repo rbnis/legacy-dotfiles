@@ -21,9 +21,8 @@ new_window pixel 1
 new_float pixel 1
 hide_edge_borders smart
 
-smart_gaps off
-gaps inner 5
-gaps outer -5
+smart_gaps on
+gaps inner 10
 
 # Autostart
 exec --no-startup-id mako

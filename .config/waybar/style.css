@@ -9,7 +9,6 @@
 
 window {
     color:      #E1E1E1;
-    /*background: transparent;*/
     background: rgba(45, 45, 45, 0.2);
     border-top: 3px solid rgba(225, 225, 225, 0.1);
 }
@@ -80,15 +79,15 @@ window {
 #custom-spotify {
     padding:    0 7px;
     margin:     0 10px;
+    min-width:  150px;
     color:      #84BD00;
     background: rgba(45, 45, 45, 0.75);
     border-top: 3px solid #84BD00;
 }
 
-/*#custom-spotify.paused {
-    color:      #2d2d2d;
-    background: rgba(132, 189, 0, 0.5);
-}*/
+#custom-spotify.paused {
+    min-width:  20px;
+}
 
 #custom-test.yellow {
     border-top: 3px solid #DFAF00;

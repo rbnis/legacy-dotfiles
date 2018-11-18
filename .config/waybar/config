@@ -1,7 +1,7 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar at the bottom of your screen
-    "height": 30, // Waybar height
+    "layer": "top",
+    "position": "top",
+    "height": 30,
 
     "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["sway/window"],
@@ -10,7 +10,6 @@
         "format": " {}"
     },
     "sway/workspaces": {
-//        "all-outputs": true,
         "disable-scroll": true
     },
     "sway/window": {
@@ -21,7 +20,7 @@
         "interval": 20
     },
     "cpu": {
-        "format": "{}%  ",
+        "format": "{usage}%  ",
         "interval": 5
     },
     "memory": {
@@ -37,7 +36,6 @@
         }
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format": "{ifname} {ipaddr}/{cidr} ",
         "format-wifi": "{essid} {ipaddr}/{cidr} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
@@ -49,10 +47,10 @@
         "format-icons": {
             "default": ["", ""]
         },
-        "scroll-step": 10
+        "scroll-step": 10,
+        "on-click": "pavucontrol"
     },
     "custom/spotify": {
-        //"format": " {}",
         "interval": 1,
         "return-type": "json",
         "max-length": 40,
