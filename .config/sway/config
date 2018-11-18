@@ -8,10 +8,10 @@ set $screenclip slurp | grim -g - ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H
 set $background ~/.images/conifer.jpg
 
 # Colors                border  bg      text    indi    childborder
-client.focused          #5FAF5F #5FAF5F #2D2D2D #DFAF00 #5FAF5F
-client.focused_inactive #2B552B #2B552B #E1E1E1 #DFAF00 #2B552B
-client.unfocused        #2D2D2D #2D2D2D #E1E1E1 #2D2D2D #2D2D2D
-client.urgent           #900000 #900000 #E1E1E1 #900000 #900000
+client.focused          #5FAF5F #5FAF5F #1D1F21 #5F819D #5FAF5F
+client.focused_inactive #2B552B #2B552B #C5C8C6 #2B552B #2B552B
+client.unfocused        #1D1F21 #1D1F21 #C5C8C6 #1D1F21 #1D1F21
+client.urgent           #A54242 #A54242 #C5C8C6 #A54242 #A54242
 
 # Font
 font pango:Sans 12

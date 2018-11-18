@@ -6,25 +6,25 @@ indicator-thickness=60
 #line-uses-inside
 
 inside-color=5FAF5F00
-inside-clear-color=DFAF0000
-inside-ver-color=43656500
-inside-wrong-color=90000000
+inside-clear-color=CDAD3A00
+inside-ver-color=5F819D00
+inside-wrong-color=A5424200
 
-ring-color=2D2D2DD9
-ring-clear-color=2D2D2DD9
-ring-ver-color=2D2D2DD9
-ring-wrong-color=2D2D2DD9
+ring-color=1D1F21D9
+ring-clear-color=1D1F21D9
+ring-ver-color=1D1F21D9
+ring-wrong-color=1D1F21D9
 
 line-color=5FAF5F00
-line-clear-color=DFAF00FF
-line-ver-color=436565FF
-line-wrong-color=900000FF
+line-clear-color=CDAD3AFF
+line-ver-color=5F819DFF
+line-wrong-color=A54242FF
 
 text-color=5FAF5F00
-text-clear-color=DFAF0000
-text-ver-color=43656500
-text-wrong-color=90000000
+text-clear-color=CDAD3A00
+text-ver-color=5F819D00
+text-wrong-color=A5424200
 
 key-hl-color=5FAF5FFF
-bs-hl-color=900000FF
-separator-color=2D2D2D00
+bs-hl-color=A54242FF
+separator-color=1D1F2100

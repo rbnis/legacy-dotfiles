@@ -8,71 +8,72 @@
 }
 
 window {
-    color:      #E1E1E1;
-    background: rgba(45, 45, 45, 0.2);
-    border-top: 3px solid rgba(225, 225, 225, 0.1);
+    color:      #c5c8c6;
+    background: rgba(29, 31, 33, 0.2);
+    border-top: 3px solid rgba(196, 200, 198, 0.2);
 }
 
 #workspaces button {
     padding:    0 10px;
-    color:      #E1E1E1;
-    background: rgba(45, 45, 45, 0.5);
+    color:      #c5c8c6;
+    background: rgba(29, 31, 33, 0.5);
     border-top: 3px solid #5FAF5F;
 }
 
 #workspaces button.visible {
-    color:      #E1E1E1;
-    background: rgba(95, 175, 95, 0.3);
+    color:      #c5c8c6;
+    background: rgba(95, 175, 95, 0.2);
     border-top: 3px solid #5FAF5F;
 }
 
 #workspaces button.focused {
-    color:      #E1E1E1;
+    color:      #c5c8c6;
     background: rgba(95, 175, 95, 0.5);
     border-top: 3px solid #5FAF5F;
 }
 
 #workspaces button.urgent {
-    border-top: 3px solid #900000;
+    border-top: 3px solid #a54242;
 }
 
 #mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-storage, #custom-brightness {
     padding:    0 7px;
     margin:     0 0 0 10px;
     min-width:  45px;
-    color:      #E1E1E1;
-    background: rgba(45, 45, 45, 0.75);
+    color:      #c5c8c6;
+    background: rgba(29, 31, 33, 0.75);
     border-top: 3px solid #5FAF5F;
 }
 
 #mode {
-    border-top: 3px solid #900000;
+    border-top: 3px solid #a54242;
 }
 
 #clock {
-    color:      #E1E1E1;
+    color:      #c5c8c6;
     background: rgba(95, 175, 95, 0.5);
     border-top: 3px solid #5FAF5F;
 }
 
 #battery.charging {
-    border-top: 3px solid #436565;  
+    border-top: 3px solid #5f819d;  
 }
 
 #battery.warning {
-    border-top: 3px solid #DFAF00;
+    border-top: 3px solid #cdad3a;
 }
 
 #battery.critical {
-    border-top: 3px solid #900000;
+    border-top: 3px solid #a54242;
 }
 
 #network.disconnected {
-    border-top: 3px solid #900000;
+    border-top: 3px solid #a54242;
 }
 
 #pulseaudio.muted {
-    border-top: 3px solid #900000;
+    min-width:  20px;
+    border-top: 3px solid #a54242;
 }
 
 #custom-spotify {
@@ -80,7 +81,7 @@ window {
     margin:     0 10px;
     min-width:  150px;
     color:      #84BD00;
-    background: rgba(45, 45, 45, 0.75);
+    background: rgba(29, 31, 33, 0.75);
     border-top: 3px solid #84BD00;
 }
 
@@ -93,9 +94,9 @@ window {
 }
 
 #custom-storage.warning {
-    border-top: 3px solid #DFAF00;
+    border-top: 3px solid #cdad3a;
 }
 
 #custom-storage.critical {
-    border-top: 3px solid #900000;
+    border-top: 3px solid #a54242;
 }

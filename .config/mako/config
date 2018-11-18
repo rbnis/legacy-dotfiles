@@ -9,10 +9,10 @@ default-timeout=5000
 # Only for desktop, ignored when no such output exists
 output=DP-3
 
-background-color=#2D2D2D
+background-color=#1D1F21
 border-color=#5FAF5F
-text-color=#E1E1E1
+text-color=#C5C8C6
 
 [urgency=high]
-border-color=#900000
+border-color=#a54242
 ignore-timeout=1

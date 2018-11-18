@@ -1,34 +1,34 @@
 configuration {
-    modi: "drun";
-    show-icons:   true;
+    modi:            "drun";
+    show-icons:      true;
     drun-icon-theme: "Paper";
-    sidebar-mode: false;
+    sidebar-mode:    false;
 }
 
 * {
-    color-background: #2D2D2DAA;
-    color-text:       #E1E1E1;
+    color-background: #1D1F21D9;
+    color-text:       #C5C8C6;
     color-highlight:  #5FAF5F;
 
     background-color: transparent;
     text-color:       @color-text;
     spacing:          30;
 
-    font: "Sans 18";
+    font:             "Sans 18";
 }
 
 #window {
-    fullscreen: true;
-    transparency: "background";
+    fullscreen:       true;
+    transparency:     "background";
 
     background-color: @color-background;
    
-    children: [ dummy1, hdum, dummy2 ];
+    children:         [ dummy1, hdum, dummy2 ];
 }
 
 #hdum {
     orientation: horizontal;
-    children: [ dummy3, mainbox, dummy4 ];
+    children:    [ dummy3, mainbox, dummy4 ];
 }
 
 #element selected {
