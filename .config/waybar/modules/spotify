@@ -6,13 +6,12 @@ icon=""
 
 if [[ $class == "playing" ]]; then
   info=$(playerctl metadata --player=spotify --format '{{artist}} - {{title}}')
+  text=$icon" "$info
 elif [[ $class == "paused" ]]; then
   icon=""
+  text=$icon
+elif [[ $class == "stopped" ]]; then
+  text=$icon
 fi
 
-if [[ $info == "" ]]; then
-  text=$icon
-else
-  text=$icon" "$info
-fi
 echo -e "{\"text\":\""$text"\", \"class\":\""$class"\"}"

@@ -57,7 +57,6 @@ window {
 
 #battery.charging {
     border-top: 3px solid #436565;  
-
 }
 
 #battery.warning {
@@ -89,10 +88,14 @@ window {
     min-width:  20px;
 }
 
-#custom-test.yellow {
-    border-top: 3px solid #DFAF00;
-}
-#custom-test.red {
-    border-top: 3px solid #900000;
+#custom-spotify.stopped {
+    min-width:  20px;
 }
 
+#custom-storage.warning {
+    border-top: 3px solid #DFAF00;
+}
+
+#custom-storage.critical {
+    border-top: 3px solid #900000;
+}
