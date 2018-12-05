@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "height": 30,
 
@@ -16,8 +16,7 @@
         "max-length": 80
     },
     "clock": {
-        "format": "{:%a, %d. %b    %H:%M}",
-        "interval": 20
+        "format": "{:%a, %d. %b    %H:%M}"
     },
     "cpu": {
         "format": "{usage}%  ",

@@ -1,17 +1,25 @@
 # Variables
 set $mod Mod4
 set $lock ~/.local/bin/scripts/lock.sh
+set $power ~/.config/rofi/modi/power
+set $wifi ~/.config/rofi/modi/nmcli
 set $term termite
-set $menu rofi -m $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[], .floating_nodes[]) | .focused] | any) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
+set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
 set $screenshot grim ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
 set $screenclip slurp | grim -g - ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
 set $background ~/.images/conifer.jpg
 
-# Colors                border  bg      text    indi    childborder
-client.focused          #5FAF5F #5FAF5F #1D1F21 #5F819D #5FAF5F
-client.focused_inactive #2B552B #2B552B #C5C8C6 #2B552B #2B552B
-client.unfocused        #1D1F21 #1D1F21 #C5C8C6 #1D1F21 #1D1F21
-client.urgent           #A54242 #A54242 #C5C8C6 #A54242 #A54242
+set $cl_high #5faf5f
+set $cl_indi #5f819d
+set $cl_back #1d1f21
+set $cl_fore #c5c8c6
+set $cl_urge #a54242
+
+# Colors                border   bg       text     indi     childborder
+client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
+client.focused_inactive #2B552B  #2B552B  $cl_fore #2B552B  #2B552B
+client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 # Font
 font pango:Sans 12
@@ -60,6 +68,8 @@ bindsym $mod+b splith
 bindsym $mod+v splitv
 
 bindsym $mod+l exec $lock
+bindsym $mod+Escape exec $power
+bindsym $mod+End exec $wifi
 
 # Notifications
 bindsym Control+Space exec makoctl dismiss
@@ -86,10 +96,6 @@ exec swayidle \
 #     timeout 600 'swaymsg "output * dpms off"' \
 #          resume 'swaymsg "output * dpms on"' \
     before-sleep 'exec $lock'
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 600 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 # Move your focus around
 bindsym $mod+Left focus left

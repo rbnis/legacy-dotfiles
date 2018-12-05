@@ -55,10 +55,6 @@ window {
     border-top: 3px solid #5FAF5F;
 }
 
-#battery.charging {
-    border-top: 3px solid #5f819d;  
-}
-
 #battery.warning {
     border-top: 3px solid #cdad3a;
 }
@@ -67,7 +63,12 @@ window {
     border-top: 3px solid #a54242;
 }
 
+#battery.charging {
+    border-top: 3px solid #5f819d;
+}
+
 #network.disconnected {
+    min-width:  20px;
     border-top: 3px solid #a54242;
 }
 
@@ -79,7 +80,7 @@ window {
 #custom-spotify {
     padding:    0 7px;
     margin:     0 10px;
-    min-width:  150px;
+    min-width:  100px;
     color:      #84BD00;
     background: rgba(29, 31, 33, 0.75);
     border-top: 3px solid #84BD00;
