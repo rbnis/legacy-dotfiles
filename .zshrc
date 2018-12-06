@@ -28,7 +28,7 @@ export TERM=xterm-256color
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
-setopt appendhistory autocd extendedglob notify
+setopt appendhistory autocd extendedglob notify complete_aliases
 bindkey -e
 
 # End of lines configured by zsh-newuser-install
