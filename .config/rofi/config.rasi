@@ -6,9 +6,9 @@ configuration {
 }
 
 * {
-    color-background: #1D1F21D9;
-    color-text:       #C5C8C6;
-    color-highlight:  #5FAF5F;
+    color-background: rgba(35, 31, 32, 0.85);
+    color-text:       rgba(217, 216, 216, 1);
+    color-highlight:  rgba(0, 157, 220, 1);
 
     background-color: transparent;
     text-color:       @color-text;

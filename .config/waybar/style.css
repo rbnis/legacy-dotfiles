@@ -8,96 +8,54 @@
 }
 
 window {
-    color:      #c5c8c6;
-    background: rgba(29, 31, 33, 0.2);
-    border-top: 3px solid rgba(196, 200, 198, 0.2);
+    color:      rgba(217, 216, 216, 1);
+    background: rgba(35, 31, 32, 1);
 }
 
 #workspaces button {
-    padding:    0 10px;
-    color:      #c5c8c6;
-    background: rgba(29, 31, 33, 0.5);
-    border-top: 3px solid #5FAF5F;
+    padding:    0 5px;
+    color:      rgba(217, 216, 216, 0.4);
+    background: rgba(35, 31, 32, 1);
 }
 
 #workspaces button.visible {
-    color:      #c5c8c6;
-    background: rgba(95, 175, 95, 0.2);
-    border-top: 3px solid #5FAF5F;
+    color:      rgba(217, 216, 216, 1);
 }
 
 #workspaces button.focused {
-    color:      #c5c8c6;
-    background: rgba(95, 175, 95, 0.5);
-    border-top: 3px solid #5FAF5F;
+    color:      rgba(0, 157, 220, 1);
 }
 
 #workspaces button.urgent {
-    border-top: 3px solid #a54242;
+    color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-storage, #custom-brightness {
-    padding:    0 7px;
-    margin:     0 0 0 10px;
-    min-width:  45px;
-    color:      #c5c8c6;
-    background: rgba(29, 31, 33, 0.75);
-    border-top: 3px solid #5FAF5F;
-}
-
-#mode {
-    border-top: 3px solid #a54242;
+#mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-storage, #custom-brightness, #custom-spotify, #custom-weather {
+    margin:     0 10px;
+    min-width:  25px;
 }
 
 #clock {
-    color:      #c5c8c6;
-    background: rgba(95, 175, 95, 0.5);
-    border-top: 3px solid #5FAF5F;
+    min-width:  140px;
 }
 
 #battery.warning {
-    border-top: 3px solid #cdad3a;
+   color:       rgba(255, 210, 4, 1);
 }
 
 #battery.critical {
-    border-top: 3px solid #a54242;
+    color:      rgba(238, 46, 36, 1);
+    color:      rgba(238, 46, 36, 1);
 }
 
 #battery.charging {
-    border-top: 3px solid #5f819d;
-}
-
-#network.disconnected {
-    min-width:  20px;
-    border-top: 3px solid #a54242;
-}
-
-#pulseaudio.muted {
-    min-width:  20px;
-    border-top: 3px solid #a54242;
-}
-
-#custom-spotify {
-    padding:    0 7px;
-    margin:     0 10px;
-    min-width:  100px;
-    color:      #84BD00;
-    background: rgba(29, 31, 33, 0.75);
-    border-top: 3px solid #84BD00;
-}
-
-#custom-spotify.paused {
-    min-width:  20px;
-}
-
-#custom-spotify.stopped {
-    min-width:  20px;
+    color:      rgba(217, 216, 216, 1);
 }
 
 #custom-storage.warning {
-    border-top: 3px solid #cdad3a;
+    color:      rgba(255, 210, 4, 1);
 }
 
 #custom-storage.critical {
-    border-top: 3px solid #a54242;
+    color:      rgba(238, 46, 36, 1);
 }

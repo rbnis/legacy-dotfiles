@@ -1,12 +1,7 @@
 [options]
 allow_bold = true
-#clickable_url = true
 font = Mono 11
-#fullscreen = true
-#scroll_on_output = false
-#scroll_on_keystroke = true
 scrollback_lines = 10000
-#hyperlinks = false
 
 cursor_blink = system
 cursor_shape = block
@@ -14,53 +9,39 @@ scrollbar = off
 
 [colors]
 # special
-foreground      = #c5c8c6
-foreground_bold = #c5c8c6
-cursor          = #c5c8c6
-#background      = #1d1f21
-background = rgba(29, 31, 33, 0.85)
+foreground      = rgba(217, 216, 216, 1)
+foreground_bold = rgba(217, 216, 216, 1)
+cursor          = rgba(217, 216, 216, 1)
+background      = rgba(35, 31, 32, 1)
 
 # black
-color0  = #282a2e
-color8  = #373b41
+color0  = #231f20
+color8  = #737171
 
 # red
-color1  = #a54242
-color9  = #cc6666
+color1  = #ee2e24
+color9  = #ee2e24
 
 # green
-color2  = #5faf5f
-color10 = #80cb80
+color2  = #00853e
+color10 = #00853e
 
 # yellow
-color3  = #cdad3a
-color11 = #f0c674
+color3  = #ffd204
+color11 = #ffd204
 
 # blue
-color4  = #5f819d
-color12 = #81a2be
+color4  = #009ddc
+color12 = #009ddc
 
 # magenta
-color5  = #85678f
-color13 = #b294bb
+color5  = #98005d
+color13 = #98005d
 
 # cyan
-color6  = #5e8d87
-color14 = #8abeb7
+color6  = #85cebc
+color14 = #85cebc
 
 # white
-color7  = #707880
-color15 = #c5c8c6
-
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
-
-# vim: ft=dosini cms=#%s
+color7  = #d9d8d8
+color15 = #ffffff

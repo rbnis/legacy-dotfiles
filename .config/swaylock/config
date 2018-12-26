@@ -1,30 +1,30 @@
 ignore-empty-password
-font=Roboto
+font=Sans
 indicator-radius=120
 indicator-thickness=60
 
 #line-uses-inside
 
-inside-color=5FAF5F00
-inside-clear-color=CDAD3A00
-inside-ver-color=5F819D00
-inside-wrong-color=A5424200
+inside-color=009ddc00
+inside-clear-color=ffd20400
+inside-ver-color=d9d8d800
+inside-wrong-color=ee2e2400
 
-ring-color=1D1F21D9
-ring-clear-color=1D1F21D9
-ring-ver-color=1D1F21D9
-ring-wrong-color=1D1F21D9
+ring-color=231f20D9
+ring-clear-color=231f20D9
+ring-ver-color=231f20D9
+ring-wrong-color=231f20D9
 
-line-color=5FAF5F00
-line-clear-color=CDAD3AFF
-line-ver-color=5F819DFF
-line-wrong-color=A54242FF
+line-color=009ddc00
+line-clear-color=ffd204FF
+line-ver-color=d9d8d8FF
+line-wrong-color=ee2e24FF
 
-text-color=5FAF5F00
-text-clear-color=CDAD3A00
-text-ver-color=5F819D00
-text-wrong-color=A5424200
+text-color=009ddc00
+text-clear-color=ffd20400
+text-ver-color=d9d8d800
+text-wrong-color=ee2e2400
 
-key-hl-color=5FAF5FFF
-bs-hl-color=A54242FF
-separator-color=1D1F2100
+key-hl-color=009ddcFF
+bs-hl-color=ee2e24FF
+separator-color=231f2000

@@ -3,11 +3,11 @@
     "position": "top",
     "height": 30,
 
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "custom/brightness", "network", "custom/storage", "memory", "cpu", "battery", "clock"],
+    "modules-right": ["custom/spotify", "custom/weather", "custom/storage", "custom/brightness", "pulseaudio", "network", "battery", "clock"],
     "sway/mode": {
-        "format": " {}"
+        "format": " {}"
     },
     "sway/workspaces": {
         "disable-scroll": true
@@ -16,35 +16,32 @@
         "max-length": 80
     },
     "clock": {
-        "format": "{:%a, %d. %b    %H:%M}"
-    },
-    "cpu": {
-        "format": "{usage}%  ",
-        "interval": 5
-    },
-    "memory": {
-        "format": "{}%  "
+        "format": "{:%a %d %b %H:%M}"
     },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""],
-        "interval": 60,
+        "format": "{icon}",
+        "format-icons": ["","", "", "", "", ""],
+        "format-charging": "",
+        "interval": 30,
         "states": {
             "warning": 25,
             "critical": 10
         }
     },
     "network": {
-        "format": "{ifname} {ipaddr}/{cidr} ",
-        "format-wifi": "{essid} {ipaddr}/{cidr} ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "format-disconnected": ""
+        "format": "{icon}",
+        "format-icons": {
+            "wifi": ["", "" ,""],
+            "ethernet": [""],
+            "disconnected": [""]
+        }
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
+        "format": "{icon}",
+        "format-muted": "",
         "format-icons": {
-            "default": ["", ""]
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
         },
         "scroll-step": 10,
         "on-click": "pavucontrol"
@@ -52,20 +49,28 @@
     "custom/spotify": {
         "interval": 1,
         "return-type": "json",
-        "max-length": 40,
         "exec": "~/.config/waybar/modules/spotify",
         "exec-if": "pgrep spotify"
     },
     "custom/storage": {
-        "format": "{}  ",
+        "format": "{} ",
         "return-type": "json",
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage"
     },
     "custom/brightness": {
-        "format": "{} ",
-        "interval": 15,
+        "format": "{}",
+        "format-icons": ["", ""],
+//        "format": "{} ",
+//        "format-icons": ["", "", "", "", ""],
+        "interval": 5,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/brightness"
+    },
+    "custom/weather": {
+        "format": "{} ",
+        "interval": 60,
+        "exec": "curl https://wttr.in/Kassel?format=%t",
+        "exec-if": "ping wttr.in -c1"
     }
 }

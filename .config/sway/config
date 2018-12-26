@@ -7,17 +7,17 @@ set $term termite
 set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
 set $screenshot grim ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
 set $screenclip slurp | grim -g - ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
-set $background ~/.images/conifer.jpg
+set $background ~/.images/cat.jpg
 
-set $cl_high #5faf5f
-set $cl_indi #5f819d
-set $cl_back #1d1f21
-set $cl_fore #c5c8c6
-set $cl_urge #a54242
+set $cl_high #009ddc
+set $cl_indi #d9d8d8
+set $cl_back #231f20
+set $cl_fore #d9d8d8
+set $cl_urge #ee2e24
 
 # Colors                border   bg       text     indi     childborder
 client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
-client.focused_inactive #2B552B  #2B552B  $cl_fore #2B552B  #2B552B
+client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 

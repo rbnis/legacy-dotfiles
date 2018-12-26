@@ -1,7 +1,6 @@
 # Output configuration
-output HDMI-A-2 disable
-output 'Dell Inc. DELL U2415 08DXD49E5DUL' resolution 1920x1200 position 0,0
-output 'Dell Inc. DELL U2415 08DXD49E5DHL' resolution 1920x1200 position 1920,0
+output 'Dell Inc. DELL U2415 08DXD49E5DUL' mode 1920x1200 position 0,0
+output 'Dell Inc. DELL U2415 08DXD49E5DHL' mode 1920x1200 position 1920,0
 
 # Default outputs for workspaces
 workspace 1 output 'Dell Inc. DELL U2415 08DXD49E5DUL'

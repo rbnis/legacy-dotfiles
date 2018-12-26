@@ -7,12 +7,12 @@ border-size=2
 default-timeout=5000
 
 # Only for desktop, ignored when no such output exists
-output=DP-3
+output='Dell Inc. DELL U2415 08DXD49E5DUL'
 
-background-color=#1D1F21
-border-color=#5FAF5F
-text-color=#C5C8C6
+background-color=#231f20
+border-color=#009ddc
+text-color=#d9d8d8
 
 [urgency=high]
-border-color=#a54242
+border-color=#ee2e24
 ignore-timeout=1
