@@ -1,0 +1,37 @@
+{
+    "terminal.integrated.rendererType": "dom",
+    "window.titleBarStyle": "native",
+    "editor.minimap.enabled": true,
+    "window.menuBarVisibility": "toggle",
+    "editor.minimap.renderCharacters": false,
+
+    "workbench.colorCustomizations": {
+        "foreground": "#d9d8d8",
+        "activityBar.foreground": "#009ddc",
+        "activityBar.inactiveForeground": "#d9d8d8",
+        "activityBar.background": "#231F20",
+        "activityBarBadge.background": "#009ddc",
+        "activityBarBadge.foreground": "#231f20",
+        "sideBar.foreground": "#d9d8d8",
+        "sideBar.background": "#231F20",
+        "editorGroupHeader.tabsBackground": "#231F20",
+        "tab.border": "#231f20",
+        "tab.activeBackground": "#231F20",
+        "tab.activeForeground": "#d9d8d8",
+        "tab.activeModifiedBorder": "#009ddc",
+        "tab.inactiveModifiedBorder": "#009ddc",
+        "editor.background": "#231f20",
+        "editor.foreground": "#d9d8d8",
+        "editorLineNumber.activeForeground": "#d9d8d8",
+        "editorWidget.background": "#231f20",
+        "statusBar.foreground": "#d9d8d8",
+        "statusBar.background": "#231f20",
+        "notifications.foreground": "#d9d8d8",
+        "notifications.background": "#231f20"
+    },
+    "workbench.editor.highlightModifiedTabs": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.renderWhitespace": "boundary",
+    "breadcrumbs.enabled": false,
+    "workbench.statusBar.visible": true
+}
