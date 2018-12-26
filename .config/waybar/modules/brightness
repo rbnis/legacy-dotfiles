@@ -14,5 +14,5 @@ else
     class="dim"
   fi
 
-  echo -e "{\"text\":\""$text"\", \"class\":\""$class"\"}"
+  echo -e "{\"percentage\":$text, \"class\":\""$class"\"}"
 fi

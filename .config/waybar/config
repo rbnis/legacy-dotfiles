@@ -59,17 +59,17 @@
         "exec": "~/.config/waybar/modules/storage"
     },
     "custom/brightness": {
-        "format": "{}",
-        "format-icons": ["", ""],
-//        "format": "{} ",
-//        "format-icons": ["", "", "", "", ""],
+//        "format": "{icon}",
+//        "format-icons": ["", ""],
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
         "interval": 5,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/brightness"
     },
     "custom/weather": {
         "format": "{} ",
-        "interval": 60,
+        "interval": 3600,
         "exec": "curl https://wttr.in/Kassel?format=%t",
         "exec-if": "ping wttr.in -c1"
     }
