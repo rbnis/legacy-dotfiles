@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Save current IFS
+SAVEIFS=$IFS
+# Change IFS to new line.
+IFS=$'\n'
+weather=($(curl -s https://en.wttr.in/Kassel\?0QnT 2>&1 | sed -E 's/^.{15}//' | head -2))
+# Restore IFSClear
+IFS=$SAVEIFS
+
+# https://fontawesome.com/icons?s=solid&c=weather
+case ${weather[0]} in
+"Clear" | "Sunny")
+    condition=""
+    ;;
+"Partly cloudy")
+    condition=""
+    ;;
+"Cloudy")
+    condition=""
+    ;;
+"Overcast")
+    condition=""
+    ;;
+"Mist" | "Fog" | "Freezing fog")
+    condition=""
+    ;;
+"Patchy rain possible" | "Patchy light drizzle" | "Light drizzle" | "Patchy light rain" | "Light rain" | "Light rain shower")
+    condition=""
+    ;;
+"Moderate rain at times" | "Moderate rain" | "Heavy rain at times" | "Heavy rain" | "Moderate or heavy rain shower" | "Torrential rain shower")
+    condition=""
+    ;;
+"Patchy snow possible" | "Patchy sleet possible" | "Patchy freezing drizzle possible" | "Freezing drizzle" | "Heavy freezing drizzle" | "Light freezing rain" | "Moderate or heavy freezing rain" | "Light sleet" | "Ice pellets" | "Light sleet showers" | "Moderate or heavy sleet showers")
+    condition=""
+    ;;
+"Blowing snow" | "Moderate or heavy sleet" | "Patchy light snow" | "Light snow" | "Light snow showers")
+    condition=""
+    ;;
+"Blizzard" | "Patchy moderate snow" | "Moderate snow" | "Patchy heavy snow" | "Heavy snow" | "Moderate or heavy snow with thunder" | "Moderate or heavy snow showers")
+    condition=""
+    ;;
+"Thundery outbreaks possible" | "Patchy light rain with thunder" | "Moderate or heavy rain with thunder" | "Patchy light snow with thunder")
+    condition=""
+    ;;
+*)
+    condition="dayum"
+    ;;
+esac
+
+echo ${weather[1]}${weather[2]} $condition

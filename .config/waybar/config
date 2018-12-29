@@ -19,9 +19,9 @@
         "format": "{:%a %d %b %H:%M}"
     },
     "battery": {
-        "format": "{icon}",
-        "format-icons": ["","", "", "", "", ""],
-        "format-charging": "",
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "{capacity}% ",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -34,10 +34,13 @@
             "wifi": ["", "" ,""],
             "ethernet": [""],
             "disconnected": [""]
-        }
+        },
+//        "tooltip": "{ifname}: {ipaddr}/{cidr}\n{essid}",
+        "on-click": "termite -e nmtui"
     },
     "pulseaudio": {
         "format": "{icon}",
+        "format-alt": "{volume} {icon}",
         "format-muted": "",
         "format-icons": {
             "phone": [" ", " ", " ", " "],
@@ -59,18 +62,16 @@
         "exec": "~/.config/waybar/modules/storage"
     },
     "custom/brightness": {
-//        "format": "{icon}",
-//        "format-icons": ["", ""],
-        "format": "{icon}",
-        "format-icons": ["", "", "", "", ""],
+        "format": "{icon}",
+        "format-icons": ["", "", ""],
         "interval": 5,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/brightness"
     },
     "custom/weather": {
-        "format": "{} ",
-        "interval": 3600,
-        "exec": "curl https://wttr.in/Kassel?format=%t",
+        "format": "{}",
+        "interval": 1800,
+        "exec": "~/.config/waybar/modules/weather",
         "exec-if": "ping wttr.in -c1"
     }
 }

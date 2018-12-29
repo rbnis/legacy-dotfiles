@@ -31,7 +31,7 @@ window {
 }
 
 #mode, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-storage, #custom-brightness, #custom-spotify, #custom-weather {
-    margin:     0 10px;
+    margin:     0 16 0 0px;
     min-width:  25px;
 }
 
