@@ -30,6 +30,7 @@
     },
     "network": {
         "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-icons": {
             "wifi": ["", "" ,""],
             "ethernet": [""],
@@ -63,6 +64,7 @@
     },
     "custom/brightness": {
         "format": "{icon}",
+        "format-alt": "{percentage} {icon}",
         "format-icons": ["", "", ""],
         "interval": 5,
         "return-type": "json",
