@@ -23,6 +23,7 @@ source /usr/share/fzf/key-bindings.zsh
 export LANG=en_US.UTF-8
 export VISUAL="nano"
 export TERM=xterm-256color
+export ELECTRON_TRASH=gio
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
