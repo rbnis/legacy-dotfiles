@@ -1,7 +1,7 @@
 configuration {
     modi:            "drun";
     show-icons:      true;
-    drun-icon-theme: "Paper";
+    icon-theme:      "Paper";
     sidebar-mode:    false;
 }
 

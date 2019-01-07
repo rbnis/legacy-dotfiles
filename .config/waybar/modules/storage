@@ -17,6 +17,6 @@ END {
   } else if ((100 - use) < warning) {
     class="warning"
   }
-  print "{\"text\":\""text"\", \"tooltip\":\""tooltip"\", \"class\":\""class"\"}"
+  print "{\"text\":\""text"\", \"percentage\":"use",\"tooltip\":\""tooltip"\", \"class\":\""class"\"}"
 }
 '
