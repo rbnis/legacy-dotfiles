@@ -10,13 +10,11 @@ input "1739:0:Synaptics_TM2941-001" {
 }
 
 # Default outputs for workspaces
-workspace 1 output 'Dell Inc. DELL U2415 08DXD49E5DUL'
-workspace 2 output 'Dell Inc. DELL U2415 08DXD49E5DHL'
-workspace 3 output eDP-1
-workspace "11 " output 'Dell Inc. DELL U2415 08DXD49E5DHL'
-workspace "12 " output 'Dell Inc. DELL U2415 08DXD49E5DHL'
-workspace "22 " output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace 1: output 'Dell Inc. DELL U2415 08DXD49E5DUL'
+workspace 2:2 output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace 3:3 output eDP-1
+workspace 11: output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace 12: output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace 22: output 'Dell Inc. DELL U2415 08DXD49E5DHL'
 
-workspace 3
-workspace 2
-workspace 1
+workspace 1:

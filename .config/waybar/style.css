@@ -12,6 +12,10 @@ window {
     background: rgba(35, 31, 32, 1);
 }
 
+#workspaces {
+    margin: 0 5px
+}
+
 #workspaces button {
     padding:    0 5px;
     color:      rgba(217, 216, 216, 0.4);
