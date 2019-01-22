@@ -8,6 +8,8 @@ weather=($(curl -s https://en.wttr.in/Kassel\?0QnT 2>&1 | sed -E 's/^.{15}//' | 
 # Restore IFSClear
 IFS=$SAVEIFS
 
+temp=$(echo ${weather[1]} | sed -E 's/([[:digit:]])+-/\1 to /g')
+
 # https://fontawesome.com/icons?s=solid&c=weather
 case ${weather[0]} in
 "Clear" | "Sunny")
@@ -48,4 +50,4 @@ case ${weather[0]} in
     ;;
 esac
 
-echo ${weather[1]}${weather[2]} $condition
+echo $temp $condition
