@@ -24,6 +24,7 @@ export LANG=en_US.UTF-8
 export VISUAL="nano"
 export TERM=xterm-256color
 export ELECTRON_TRASH=gio
+export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc
 export GTK_THEME=Materia-dark-compact
 
 # Lines configured by zsh-newuser-install
