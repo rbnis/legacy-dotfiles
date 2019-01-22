@@ -37,6 +37,7 @@ exec --no-startup-id mako
 exec redshift -c ~/.config/redshift/config
 exec thunderbird
 exec spotify
+exec riot
 
 # Input configuration
 input * {
@@ -53,8 +54,11 @@ assign [class="^Signal$"] 11:
 assign [class="^Riot$"] 11:
 assign [class="^Thunderbird$"] 12:
 assign [class="^code$"] 15:
+assign [app_id="virt-manager"] 18:
 assign [class="^Steam$"] 19:
 assign [class="^Spotify$"] 22:
+
+for_window [app_id="^nautilus$"] opacity 0.85
 
 # Shortcuts
 bindsym $mod+Return exec $term
@@ -128,7 +132,7 @@ bindsym $mod+F4  workspace 14:14
 bindsym $mod+F5  workspace 15:
 bindsym $mod+F6  workspace 16:16
 bindsym $mod+F7  workspace 17:17
-bindsym $mod+F8  workspace 18:18
+bindsym $mod+F8  workspace 18:
 bindsym $mod+F9  workspace 19:
 bindsym $mod+F10 workspace 20:20
 bindsym $mod+F11 workspace 21:21
@@ -152,7 +156,7 @@ bindsym $mod+Shift+F4   move container to workspace 14:14
 bindsym $mod+Shift+F5   move container to workspace 15:
 bindsym $mod+Shift+F6   move container to workspace 16:16
 bindsym $mod+Shift+F7   move container to workspace 17:17
-bindsym $mod+Shift+F8   move container to workspace 18:18
+bindsym $mod+Shift+F8   move container to workspace 18:
 bindsym $mod+Shift+F9   move container to workspace 19:
 bindsym $mod+Shift+F10  move container to workspace 20:20
 bindsym $mod+Shift+F11  move container to workspace 21:21

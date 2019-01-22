@@ -59,6 +59,7 @@
     },
     "custom/storage": {
         "format": "{} ",
+        "format-alt": "{percentage}% ",
         "return-type": "json",
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage"

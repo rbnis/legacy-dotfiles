@@ -3,6 +3,7 @@ configuration {
     show-icons:      true;
     icon-theme:      "Paper";
     sidebar-mode:    false;
+    display-drun:    "";
 }
 
 * {
