@@ -59,6 +59,7 @@ assign [class="^Steam$"] 19:
 assign [class="^Spotify$"] 22:
 
 for_window [app_id="^nautilus$"] opacity 0.85
+for_window [class="^Abricotine$"] opacity 0.85
 
 # Shortcuts
 bindsym $mod+Return exec $term
