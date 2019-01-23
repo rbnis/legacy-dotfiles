@@ -36,7 +36,7 @@
   "spellchecker": {
     "active": true,
     "language": "de_DE",
-    "src": "/home/robin/.config/Abricotine/app/dict/de_DE"
+    "src": "~/.config/Abricotine/app/dict/de_DE"
   },
   "theme": "rbn-dark",
   "window": {
