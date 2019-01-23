@@ -33,5 +33,7 @@
     "files.trimTrailingWhitespace": true,
     "editor.renderWhitespace": "boundary",
     "breadcrumbs.enabled": false,
-    "workbench.statusBar.visible": true
+    "workbench.statusBar.visible": true,
+    "git.confirmSync": false,
+    "git.autofetch": true
 }
