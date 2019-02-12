@@ -75,6 +75,7 @@
     "custom/weather": {
         "format": "{}",
         "interval": 1800,
+        "return-type": "json",
         "exec": "~/.config/waybar/modules/weather",
         "exec-if": "ping wttr.in -c1"
     }

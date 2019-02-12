@@ -1,10 +1,27 @@
 #!/bin/bash
 
+cachedir=~/.cache/rbn
+
+if [ ! -d $cachedir ]; then
+    mkdir -p $cachedir
+fi
+
+if [ ! -f $cachedir/${0##*/} ]; then
+    touch $cachedir/${0##*/}
+fi
+
 # Save current IFS
 SAVEIFS=$IFS
 # Change IFS to new line.
 IFS=$'\n'
-weather=($(curl -s https://en.wttr.in/Kassel\?0QnT 2>&1 | sed -E 's/^.{15}//' | head -2))
+
+cacheage=$(($(date +%s) - $(stat -c '%Y' "$cachedir/${0##*/}")))
+if [ $cacheage -gt 1740 ] || [ ! -s $cachedir/${0##*/} ]; then
+    curl -s https://en.wttr.in/Kassel\?0QnT 2>&1 | sed -E 's/^.{15}//' | head -2 > $cachedir/${0##*/}
+fi
+
+weather=($(cat $cachedir/${0##*/}))
+
 # Restore IFSClear
 IFS=$SAVEIFS
 
@@ -50,4 +67,6 @@ case ${weather[0]} in
     ;;
 esac
 
-echo $temp $condition
+#echo $temp $condition
+
+echo -e "{\"text\":\""$temp $condition"\", \"tooltip\":\""${weather[0]}"\"}"
