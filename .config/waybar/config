@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/spotify", "custom/weather", "custom/storage", "custom/brightness", "pulseaudio", "network", "battery", "clock"],
+    "modules-right": ["custom/spotify", "custom/weather", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -14,10 +14,12 @@
         "disable-scroll": true
     },
     "sway/window": {
-        "max-length": 80
+        "max-length": 80,
+        "tooltip": false
     },
     "clock": {
-        "format": "{:%a %d %b %H:%M}"
+        "format": "{:%a %d %b %H:%M}",
+        "tooltip": false
     },
     "battery": {
         "format": "{capacity}% {icon}",
@@ -27,7 +29,8 @@
         "states": {
             "warning": 25,
             "critical": 10
-        }
+        },
+        "tooltip": false
     },
     "network": {
         "format": "{icon}",
@@ -37,7 +40,6 @@
             "ethernet": [""],
             "disconnected": [""]
         },
-//        "tooltip": "{ifname}: {ipaddr}/{cidr}\n{essid}",
         "on-click": "termite -e nmtui"
     },
     "pulseaudio": {
@@ -49,7 +51,8 @@
             "default": ["", "", "", ""]
         },
         "scroll-step": 10,
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "tooltip": false
     },
     "custom/spotify": {
         "interval": 1,
@@ -64,13 +67,10 @@
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage"
     },
-    "custom/brightness": {
+    "backlight": {
         "format": "{icon}",
-        "format-alt": "{percentage} {icon}",
-        "format-icons": ["", "", ""],
-        "interval": 5,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/brightness"
+        "format-alt": "{percent}% {icon}",
+        "format-icons": ["", ""]
     },
     "custom/weather": {
         "format": "{}",
@@ -78,5 +78,13 @@
         "return-type": "json",
         "exec": "~/.config/waybar/modules/weather",
         "exec-if": "ping wttr.in -c1"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
     }
 }

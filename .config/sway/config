@@ -58,9 +58,6 @@ assign [app_id="virt-manager"] 18:
 assign [class="^Steam$"] 19:
 assign [class="^Spotify$"] 22:
 
-for_window [app_id="^nautilus$"] opacity 0.85
-for_window [class="^Abricotine$"] opacity 0.85
-
 # Shortcuts
 bindsym $mod+Return exec $term
 bindsym $mod+Print exec $screenshot
@@ -98,9 +95,9 @@ bindsym $mod+Home exec --no-startup-id pkill -USR1 redshift
 
 # Idle configuration
 exec swayidle \
-#     timeout 300 'exec $lock' \
-#     timeout 600 'swaymsg "output * dpms off"' \
-#          resume 'swaymsg "output * dpms on"' \
+    timeout 300 'exec $lock' \
+    timeout 600 'swaymsg "output * dpms off"' \
+        resume 'swaymsg "output * dpms on"' \
     before-sleep 'exec $lock'
 
 # Move your focus around
@@ -115,53 +112,77 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# workspaces
+set $ws1   1:
+set $ws2   2:2
+set $ws3   3:3
+set $ws4   4:4
+set $ws5   5:5
+set $ws6   6:6
+set $ws7   7:7
+set $ws8   8:8
+set $ws9   9:9
+set $ws0   10:10
+set $wsF1  11:
+set $wsF2  12:
+set $wsF3  13:13
+set $wsF4  14:14
+set $wsF5  15:
+set $wsF6  16:16
+set $wsF7  17:17
+set $wsF8  18:
+set $wsF9  19:
+set $wsF10 20:20
+set $wsF11 21:21
+set $wsF12 22:
+
 # switch to workspace
-bindsym $mod+1   workspace 1:
-bindsym $mod+2   workspace 2:2
-bindsym $mod+3   workspace 3:3
-bindsym $mod+4   workspace 4:4
-bindsym $mod+5   workspace 5:5
-bindsym $mod+6   workspace 6:6
-bindsym $mod+7   workspace 7:7
-bindsym $mod+8   workspace 8:8
-bindsym $mod+9   workspace 9:9
-bindsym $mod+0   workspace 10:10
-bindsym $mod+F1  workspace 11:
-bindsym $mod+F2  workspace 12:
-bindsym $mod+F3  workspace 13:13
-bindsym $mod+F4  workspace 14:14
-bindsym $mod+F5  workspace 15:
-bindsym $mod+F6  workspace 16:16
-bindsym $mod+F7  workspace 17:17
-bindsym $mod+F8  workspace 18:
-bindsym $mod+F9  workspace 19:
-bindsym $mod+F10 workspace 20:20
-bindsym $mod+F11 workspace 21:21
-bindsym $mod+F12 workspace 22:
+bindsym $mod+1   workspace $ws1
+bindsym $mod+2   workspace $ws2
+bindsym $mod+3   workspace $ws3
+bindsym $mod+4   workspace $ws4
+bindsym $mod+5   workspace $ws5
+bindsym $mod+6   workspace $ws6
+bindsym $mod+7   workspace $ws7
+bindsym $mod+8   workspace $ws8
+bindsym $mod+9   workspace $ws9
+bindsym $mod+0   workspace $ws0
+bindsym $mod+F1  workspace $wsF1
+bindsym $mod+F2  workspace $wsF2
+bindsym $mod+F3  workspace $wsF3
+bindsym $mod+F4  workspace $wsF4
+bindsym $mod+F5  workspace $wsF5
+bindsym $mod+F6  workspace $wsF6
+bindsym $mod+F7  workspace $wsF7
+bindsym $mod+F8  workspace $wsF8
+bindsym $mod+F9  workspace $wsF9
+bindsym $mod+F10 workspace $wsF10
+bindsym $mod+F11 workspace $wsF11
+bindsym $mod+F12 workspace $wsF12
 
 # move focused container to workspace
-bindsym $mod+Shift+1    move container to workspace 1:
-bindsym $mod+Shift+2    move container to workspace 2:2
-bindsym $mod+Shift+3    move container to workspace 3:3
-bindsym $mod+Shift+4    move container to workspace 4:4
-bindsym $mod+Shift+5    move container to workspace 5:5
-bindsym $mod+Shift+6    move container to workspace 6:6
-bindsym $mod+Shift+7    move container to workspace 7:7
-bindsym $mod+Shift+8    move container to workspace 8:8
-bindsym $mod+Shift+9    move container to workspace 9:9
-bindsym $mod+Shift+0    move container to workspace 10:10
-bindsym $mod+Shift+F1   move container to workspace 11:
-bindsym $mod+Shift+F2   move container to workspace 12:
-bindsym $mod+Shift+F3   move container to workspace 13:13
-bindsym $mod+Shift+F4   move container to workspace 14:14
-bindsym $mod+Shift+F5   move container to workspace 15:
-bindsym $mod+Shift+F6   move container to workspace 16:16
-bindsym $mod+Shift+F7   move container to workspace 17:17
-bindsym $mod+Shift+F8   move container to workspace 18:
-bindsym $mod+Shift+F9   move container to workspace 19:
-bindsym $mod+Shift+F10  move container to workspace 20:20
-bindsym $mod+Shift+F11  move container to workspace 21:21
-bindsym $mod+Shift+F12  move container to workspace 22:
+bindsym $mod+Shift+1    move container to workspace $ws1
+bindsym $mod+Shift+2    move container to workspace $ws2
+bindsym $mod+Shift+3    move container to workspace $ws3
+bindsym $mod+Shift+4    move container to workspace $ws4
+bindsym $mod+Shift+5    move container to workspace $ws5
+bindsym $mod+Shift+6    move container to workspace $ws6
+bindsym $mod+Shift+7    move container to workspace $ws7
+bindsym $mod+Shift+8    move container to workspace $ws8
+bindsym $mod+Shift+9    move container to workspace $ws9
+bindsym $mod+Shift+0    move container to workspace $ws0
+bindsym $mod+Shift+F1   move container to workspace $wsF1
+bindsym $mod+Shift+F2   move container to workspace $wsF2
+bindsym $mod+Shift+F3   move container to workspace $wsF3
+bindsym $mod+Shift+F4   move container to workspace $wsF4
+bindsym $mod+Shift+F5   move container to workspace $wsF5
+bindsym $mod+Shift+F6   move container to workspace $wsF6
+bindsym $mod+Shift+F7   move container to workspace $wsF7
+bindsym $mod+Shift+F8   move container to workspace $wsF8
+bindsym $mod+Shift+F9   move container to workspace $wsF9
+bindsym $mod+Shift+F10  move container to workspace $wsF10
+bindsym $mod+Shift+F11  move container to workspace $wsF11
+bindsym $mod+Shift+F12  move container to workspace $wsF12
 
 # Layout stuff:
 
