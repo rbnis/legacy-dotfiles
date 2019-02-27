@@ -70,10 +70,13 @@
     "backlight": {
         "format": "{icon}",
         "format-alt": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format-icons": ["", ""],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
     },
     "custom/weather": {
         "format": "{}",
+        "format-alt": "{alt}: {}",
         "interval": 1800,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/weather",
@@ -86,5 +89,11 @@
             "deactivated": ""
         },
         "tooltip": false
+    },
+    "custom/test": {
+        "format": "{}",
+        "exec": "/tmp/test blub",
+        "param": "blah",
+        "interval": 5
     }
 }
