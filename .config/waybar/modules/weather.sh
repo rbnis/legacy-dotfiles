@@ -32,38 +32,38 @@ IFS=$SAVEIFS
 temperature=$(echo ${weather[2]} | sed -E 's/([[:digit:]])+\.\./\1 to /g')
 
 # https://fontawesome.com/icons?s=solid&c=weather
-case ${weather[1]} in
-"Clear" | "Sunny")
+case $(echo ${weather[1]} | tr '[:upper:]' '[:lower:']) in
+"clear" | "sunny")
     condition=""
     ;;
-"Partly cloudy")
+"partly cloudy")
     condition=""
     ;;
-"Cloudy")
+"cloudy")
     condition=""
     ;;
-"Overcast")
+"overcast")
     condition=""
     ;;
-"Mist" | "Fog" | "Freezing fog")
+"mist" | "fog" | "freezing fog")
     condition=""
     ;;
-"Patchy rain possible" | "Patchy light drizzle" | "Light drizzle" | "Patchy light rain" | "Light rain" | "Light rain shower")
+"patchy rain possible" | "patchy light drizzle" | "light drizzle" | "patchy light rain" | "light rain" | "light rain shower")
     condition=""
     ;;
-"Moderate rain at times" | "Moderate rain" | "Heavy rain at times" | "Heavy rain" | "Moderate or heavy rain shower" | "Torrential rain shower")
+"moderate rain at times" | "moderate rain" | "heavy rain at times" | "heavy rain" | "moderate or heavy rain shower" | "torrential rain shower")
     condition=""
     ;;
-"Patchy snow possible" | "Patchy sleet possible" | "Patchy freezing drizzle possible" | "Freezing drizzle" | "Heavy freezing drizzle" | "Light freezing rain" | "Moderate or heavy freezing rain" | "Light sleet" | "Ice pellets" | "Light sleet showers" | "Moderate or heavy sleet showers")
+"patchy snow possible" | "patchy sleet possible" | "patchy freezing drizzle possible" | "freezing drizzle" | "heavy freezing drizzle" | "light freezing rain" | "moderate or heavy freezing rain" | "light sleet" | "ice pellets" | "light sleet showers" | "moderate or heavy sleet showers")
     condition=""
     ;;
-"Blowing snow" | "Moderate or heavy sleet" | "Patchy light snow" | "Light snow" | "Light snow showers")
+"blowing snow" | "moderate or heavy sleet" | "patchy light snow" | "light snow" | "light snow showers")
     condition=""
     ;;
-"Blizzard" | "Patchy moderate snow" | "Moderate snow" | "Patchy heavy snow" | "Heavy snow" | "Moderate or heavy snow with thunder" | "Moderate or heavy snow showers")
+"blizzard" | "patchy moderate snow" | "moderate snow" | "patchy heavy snow" | "heavy snow" | "moderate or heavy snow with thunder" | "moderate or heavy snow showers")
     condition=""
     ;;
-"Thundery outbreaks possible" | "Patchy light rain with thunder" | "Moderate or heavy rain with thunder" | "Patchy light snow with thunder")
+"thundery outbreaks possible" | "patchy light rain with thunder" | "moderate or heavy rain with thunder" | "patchy light snow with thunder")
     condition=""
     ;;
 *)

@@ -35,5 +35,6 @@
     "breadcrumbs.enabled": false,
     "workbench.statusBar.visible": true,
     "git.confirmSync": false,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "editor.tabSize": 2
 }

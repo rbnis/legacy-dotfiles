@@ -1,3 +1,5 @@
+#!/bin/sh
+
 mount="/"
 warning=20
 critical=10

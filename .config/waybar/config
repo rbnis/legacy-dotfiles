@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/spotify", "custom/weather", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
+    "modules-right": ["custom/spotify", "custom/weather", "custom/mail", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -35,16 +35,19 @@
     "network": {
         "format": "{icon}",
         "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
         "format-icons": {
             "wifi": ["", "" ,""],
             "ethernet": [""],
             "disconnected": [""]
         },
-        "on-click": "termite -e nmtui"
+        "on-click": "termite -e nmtui",
+    "tooltip": false
     },
     "pulseaudio": {
         "format": "{icon}",
         "format-alt": "{volume} {icon}",
+        "format-alt-click": "click-right",
         "format-muted": "",
         "format-icons": {
             "phone": [" ", " ", " ", " "],
@@ -57,19 +60,22 @@
     "custom/spotify": {
         "interval": 1,
         "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify",
-        "exec-if": "pgrep spotify"
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
     },
     "custom/storage": {
         "format": "{} ",
         "format-alt": "{percentage}% ",
+        "format-alt-click": "click-right",
         "return-type": "json",
         "interval": 60,
-        "exec": "~/.config/waybar/modules/storage"
+        "exec": "~/.config/waybar/modules/storage.sh"
     },
     "backlight": {
         "format": "{icon}",
         "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
         "format-icons": ["", ""],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
@@ -77,9 +83,10 @@
     "custom/weather": {
         "format": "{}",
         "format-alt": "{alt}: {}",
+        "format-alt-click": "click-right",
         "interval": 1800,
         "return-type": "json",
-        "exec": "~/.config/waybar/modules/weather",
+        "exec": "~/.config/waybar/modules/weather.sh",
         "exec-if": "ping wttr.in -c1"
     },
     "idle_inhibitor": {
@@ -88,6 +95,14 @@
             "activated": "",
             "deactivated": ""
         },
+        "tooltip": false
+    },
+    "custom/mail": {
+        "format": "",
+        "format-alt": "{} ",
+        "format-alt-click": "click-right",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/mail.py",
         "tooltip": false
     },
     "custom/test": {
