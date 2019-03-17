@@ -31,8 +31,10 @@ IFS=$SAVEIFS
 
 temperature=$(echo ${weather[2]} | sed -E 's/([[:digit:]])+\.\./\1 to /g')
 
+#echo ${weather[1]##*,}
+
 # https://fontawesome.com/icons?s=solid&c=weather
-case $(echo ${weather[1]} | tr '[:upper:]' '[:lower:']) in
+case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:']) in
 "clear" | "sunny")
     condition=""
     ;;
@@ -48,10 +50,10 @@ case $(echo ${weather[1]} | tr '[:upper:]' '[:lower:']) in
 "mist" | "fog" | "freezing fog")
     condition=""
     ;;
-"patchy rain possible" | "patchy light drizzle" | "light drizzle" | "patchy light rain" | "light rain" | "light rain shower")
+"patchy rain possible" | "patchy light drizzle" | "light drizzle" | "patchy light rain" | "light rain" | "light rain shower" | "rain")
     condition=""
     ;;
-"moderate rain at times" | "moderate rain" | "heavy rain at times" | "heavy rain" | "moderate or heavy rain shower" | "torrential rain shower")
+"moderate rain at times" | "moderate rain" | "heavy rain at times" | "heavy rain" | "moderate or heavy rain shower" | "torrential rain shower" | "rain shower")
     condition=""
     ;;
 "patchy snow possible" | "patchy sleet possible" | "patchy freezing drizzle possible" | "freezing drizzle" | "heavy freezing drizzle" | "light freezing rain" | "moderate or heavy freezing rain" | "light sleet" | "ice pellets" | "light sleet showers" | "moderate or heavy sleet showers")
@@ -67,7 +69,7 @@ case $(echo ${weather[1]} | tr '[:upper:]' '[:lower:']) in
     condition=""
     ;;
 *)
-    condition="Error"
+    condition=""
     ;;
 esac
 

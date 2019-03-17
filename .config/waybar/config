@@ -7,7 +7,7 @@
     "modules-center": ["sway/window"],
     "modules-right": ["custom/spotify", "custom/weather", "custom/mail", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
     "sway/mode": {
-        "format": " {}"
+        "format": " {}"
     },
     "sway/workspaces": {
         "format": "{name}",
@@ -99,9 +99,10 @@
     },
     "custom/mail": {
         "format": "",
-        "format-alt": "{} ",
+        "format-alt": "{alt} ",
         "format-alt-click": "click-right",
         "interval": 60,
+        "return-type": "json",
         "exec": "~/.config/waybar/modules/mail.py",
         "tooltip": false
     },

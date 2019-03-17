@@ -23,7 +23,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 # workspaces
 set $ws1   1:
-set $ws2   2:2
+set $ws2   2:
 set $ws3   3:3
 set $ws4   4:4
 set $ws5   5:5
@@ -36,13 +36,13 @@ set $wsF1  11:
 set $wsF2  12:
 set $wsF3  13:13
 set $wsF4  14:14
-set $wsF5  15:
+set $wsF5  15:15
 set $wsF6  16:16
 set $wsF7  17:17
 set $wsF8  18:
-set $wsF9  19:
+set $wsF9  19:19
 set $wsF10 20:20
-set $wsF11 21:21
+set $wsF11 21:
 set $wsF12 22:
 
 # Font
@@ -74,13 +74,12 @@ output * bg $background fill
 
 # Default workspaces for common programs
 assign [class="^Chromium$"] $ws1
+# assign [class="^code-oss$"] $ws2
 assign [class="^Signal$"] $wsF1
 assign [class="^Riot$"] $wsF1
-assign [class="^Thunderbird$"] $wsF2
 assign [class="^Mailspring$"] $wsF2
-assign [class="^code$"] $wsF5
 assign [app_id="virt-manager"] $wsF8
-assign [class="^Steam$"] $wsF9
+assign [class="^KeePass2$"] $wsF11
 assign [class="^Spotify$"] $wsF12
 
 # Shortcuts
