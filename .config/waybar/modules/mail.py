@@ -26,11 +26,15 @@ def getmails(username, password, server):
 ping = os.system("ping " + mailsecrets.server + " -c1 > /dev/null 2>&1")
 if ping == 0:
     mails = getmails(mailsecrets.username, mailsecrets.password, mailsecrets.server)
+    text = ''
+    alt = ''
 
     if mails[0] > 0:
         text = alt = str(mails[0])
         if mails[1] > 0:
             alt = str(mails[1]) + "  " + alt
+    else:
+        exit(1)
 
     print('{"text":"' + text + '", "alt": "' + alt + '"}')
 

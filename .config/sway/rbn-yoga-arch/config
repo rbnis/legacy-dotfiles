@@ -7,14 +7,22 @@ output eDP-1 resolution 1920x1080 position 3840,0
 input "1739:0:Synaptics_TM2941-001" {
     tap enabled
     natural_scroll enabled
+    scroll_method two_finger
+    dwt enabled
+}
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    tap enabled
+    natural_scroll enabled
+    scroll_method two_finger
+    dwt enabled
 }
 
 # Default outputs for workspaces
-workspace 1: output 'Dell Inc. DELL U2415 08DXD49E5DUL'
-workspace 2:2 output 'Dell Inc. DELL U2415 08DXD49E5DHL'
-workspace 3:3 output eDP-1
-workspace 11: output 'Dell Inc. DELL U2415 08DXD49E5DHL'
-workspace 12: output 'Dell Inc. DELL U2415 08DXD49E5DHL'
-workspace 22: output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace $ws1 output 'Dell Inc. DELL U2415 08DXD49E5DUL'
+workspace $ws2 output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace $ws3 output eDP-1
+workspace $wsF1 output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace $wsF2 output 'Dell Inc. DELL U2415 08DXD49E5DHL'
+workspace $wsF12 output 'Dell Inc. DELL U2415 08DXD49E5DHL'
 
-workspace 1:
+workspace $ws1

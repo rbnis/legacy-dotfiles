@@ -34,7 +34,7 @@ temperature=$(echo ${weather[2]} | sed -E 's/([[:digit:]])+\.\./\1 to /g')
 #echo ${weather[1]##*,}
 
 # https://fontawesome.com/icons?s=solid&c=weather
-case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:']) in
+case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:]') in
 "clear" | "sunny")
     condition=""
     ;;
@@ -70,6 +70,7 @@ case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:']) in
     ;;
 *)
     condition=""
+    echo -e "{\"text\":\""$condition"\", \"alt\":\""${weather[0]}"\", \"tooltip\":\""${weather[0]}: $temperature ${weather[1]}"\"}"
     ;;
 esac
 

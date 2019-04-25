@@ -5,9 +5,9 @@ set $power ~/.config/rofi/modi/power
 set $wifi ~/.config/rofi/modi/nmcli
 set $term termite
 set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
-set $screenshot grim ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
-set $screenclip slurp | grim -g - ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").jpg
-set $background ~/.images/cat.jpg
+set $screenshot grim ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+set $screenclip slurp | grim -g - ~/Images/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+set $background ~/.images/mountainsea.jpg
 
 set $cl_high #009ddc
 set $cl_indi #d9d8d8
@@ -62,11 +62,13 @@ exec redshift -c ~/.config/redshift/config
 exec mailspring
 exec spotify
 exec riot
+exec nextcloud
 
 # Input configuration
 input * {
     xkb_layout de
     xkb_variant nodeadkeys
+    xkb_options caps:swapescape
 }
 
 # Output configuration
@@ -121,7 +123,7 @@ bindsym $mod+Home exec --no-startup-id pkill -USR1 redshift
 exec swayidle \
     timeout 300 'exec $lock' \
     timeout 600 'swaymsg "output * dpms off"' \
-        resume 'swaymsg "output * dpms on"' \
+    after-resume 'swaymsg "output * dpms on"' \
     before-sleep 'exec $lock'
 
 # Move your focus around
@@ -238,5 +240,5 @@ bindsym $mod+Shift+e mode "$mode_system"
 
 exec_always ~/.config/waybar/waybar.sh
 
+
 include ~/.config/sway/$(hostname)/*
-#include ~/.config/sway/config.d/*

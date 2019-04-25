@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/spotify", "custom/weather", "custom/mail", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
+    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/mail", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -111,5 +111,8 @@
         "exec": "/tmp/test blub",
         "param": "blah",
         "interval": 5
+    },
+    "tray": {
+        "icon-size": 18
     }
 }

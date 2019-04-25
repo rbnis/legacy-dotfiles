@@ -49,8 +49,11 @@ export XKB_DEFAULT_LAYOUT=de
 if [ $(tty) = "/dev/tty1" ]; then
 #    export GDK_BACKEND=wayland
     export CLUTTER_BACKEND=wayland
-    export QT_QPA_PLATFORM=wayland
+#    export QT_QPA_PLATFORM=wayland-egl
     export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export QT_WAYLAND_FORCE_DPI=phyiscal
+    export ECORE_EVAS_EVAS_ENGINE=wayland_egl
+    export ELM_ENGINE=wayland_egl
     export SDL_VIDEODRIVER=wayland
     export _JAVA_AWT_WM_NONREPARENTING=1
 
