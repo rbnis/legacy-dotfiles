@@ -58,11 +58,12 @@ gaps inner 10
 
 # Autostart
 exec --no-startup-id mako
-exec redshift -c ~/.config/redshift/config
+exec --no-startup-id redshift -c ~/.config/redshift/config
 exec mailspring
 exec spotify
 exec riot
-exec nextcloud
+exec --no-startup-id nextcloud
+exec --no-startup-id libinput-gestures
 
 # Input configuration
 input * {
