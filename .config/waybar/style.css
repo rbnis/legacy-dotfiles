@@ -14,6 +14,7 @@ window {
 }
 
 window#waybar.solo {
+    color:      rgba(217, 216, 216, 1);
     background: rgba(35, 31, 32, 0.85);
 }
 

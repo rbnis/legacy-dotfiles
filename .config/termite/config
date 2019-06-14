@@ -15,33 +15,36 @@ cursor          = rgba(217, 216, 216, 1)
 background      = rgba(35, 31, 32, 0.85)
 
 # black
-color0  = #231f20
-color8  = #737171
+color0  = #282a2e
+color8  = #373b41
 
 # red
-color1  = #ee2e24
-color9  = #ee2e24
+color1  = #ff1744
+color9  = #ff1744
 
 # green
-color2  = #00853e
-color10 = #00853e
+color2  = #00e676
+color10 = #00e676
 
 # yellow
-color3  = #ffd204
-color11 = #ffd204
+color3  = #ffc400
+color11 = #ffc400
 
 # blue
+#color4  = #2979ff
+#color12 = #2979ff
 color4  = #009ddc
-color12 = #009ddc
+color12 = #099ddc
 
 # magenta
-color5  = #98005d
-color13 = #98005d
+color5  = #651fff
+color13 = #651fff
 
 # cyan
-color6  = #85cebc
-color14 = #85cebc
+color6  = #00b0ff
+color14 = #00b0ff
 
 # white
-color7  = #d9d8d8
-color15 = #ffffff
+color7  = #b0bec5
+color15 = #eceff1
+
